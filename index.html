@@ -61,6 +61,29 @@ var pickWord = function () {
   return words[Math.floor(Math.random * words.length)];
 };
 
+
+var setUpAnswerArray = function (word) {
+	return answerArray;
+};
+
+var showPlayerProgress = function (answerArray) {
+	alert(answerArray);
+};
+
+var getGuess = function () {
+	prompt("Guess a letter, or click cancel to stop playing");
+};
+
+var updateGameState = function (guess, word, answerArray) {
+  if (guess === word[j]) {
+  	answerArray[j] = guess;
+  }
+};
+
+var showAnswerAndCongratulatePlayer = function (answerArray) {
+	alert("Congratulations!  The answer was: " + answerArray);
+};
+
 // step 2 update your code here to use the functions above
 
 	var word = words[Math.floor(Math.random() * words.length)];
